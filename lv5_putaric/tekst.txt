@@ -1,0 +1,41 @@
+Skripta 5.1. učitava skup podataka koji se nalazi u csv datoteci occupancy_processed.csv. Ova datoteka sadrži
+podatke koji su prikupljeni u prostoriji veličine 6m x 4.6m tijekom 4 dana [1]. Zbog jednostavnosti skup sadrži samo dva
+atributa: mjerenja dobivena sa senzora temperature i mjerenja sa senzora CO2. Izlazna (ciljna) veličina je zauzetost
+prostorije (0 – prazna prostorija, 1 – u prostoriji se nalazi barem jedna osoba). Cilj je izgraditi klasifikator koji će na
+temelju trenutnih mjerenja dobivenih sa senzora temperature i sa senzora CO2 procijeniti zauzetost prostorije.
+    a) Pokrenite skriptu i pogledajte dobiveni dijagram raspršenja. Što primjećujete?
+    b) Koliko podatkovnih primjera sadrži učitani skup podataka?
+    c) Kakva je razdioba podatkovnih primjera po klasama?
+
+    b)10129
+    c)Room_Occupancy_Count
+        0    8228
+        1    1901
+
+Zadatak 2
+Izgradite i evaluirajte algoritam K najbližih susjeda. Slijedite ovaj redoslijed:
+
+    e) Što se događa s rezultatima ako se koristi veći odnosno manji broj susjeda?
+    f) Što se događa s rezultatima ako ne koristite skaliranje ulaznih veličina?
+
+    e) mijenja se točnost i odziv po kalsama.
+    f) Tocnost bude jako losa jer KNN ovisi o odaljenosti podataka.
+
+Zadatak 3
+Umjesto algoritma K najbližih susjeda koristite stablo odlučivanja te ponovite korake a) do d) iz prethodnog zadatka.
+    b) Što se događa s rezultatima ako mijenjate parametar max-depth stabla odlučivanja?
+    c) Što se događa s rezultatima ako ne koristite skaliranje ulaznih veličina
+
+
+    b) mijenja se dubina stabla tj. koliko klasifikacija.
+    c) Ništa značajno se neće dogoditi
+
+Zadatak 4
+ Po uzoru na prethodne zadatke izgradite model logističke regresije. Što primjećujete kod vrednovanja ovog modela? Što
+    je uzrok dobivenim rezultatima?
+
+    Ovaj model nema osjetljive parametre kao k ili max_depth
+    Uzrok su dobri ulazni podaci
+
+
+
